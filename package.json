@@ -1,26 +1,22 @@
 {
   "name": "defarm",
   "version": "1.0.0",
-  "description": "supply chain application",
+  "description": "",
   "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
-  },
-  "keywords": [
-    "supply",
-    "chain",
-    "agriculter",
-    "predication"
-  ],
-  "author": "bikki__maurya",
-  "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "fs": "^0.0.1-security",
+    "mongo": "^0.1.0",
     "mongoose": "^5.9.9",
-    "passport": "^0.4.1",
-    "passport-local": "^1.0.0",
-    "passport-local-mongoose": "^6.0.1"
+    "node-where": "^1.1.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bikrant Bikram Pratap maurya",
+  "license": "ISC"
 }
