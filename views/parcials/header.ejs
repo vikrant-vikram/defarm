@@ -1,0 +1,74 @@
+
+	
+
+<!-- header -->
+<header class="index-banner">
+    <!-- nav -->
+    <nav class="main-header">
+      <div id="brand" data-aos="zoom-in-up">
+        <div id="logo1">
+          <a href="index.html">
+            <img src="/images/logo.png">
+          
+        </div>
+        <div id="word-mark">
+          <h1>
+            <a href="index.html">DeFarm</a>
+          </h1>
+        </div>
+      </div>
+      <div id="menu">
+        <div id="menu-toggle">
+          <div id="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </div>
+        <ul class="text-center text-capitalize nav-agile" data-aos="zoom-in-up">
+            <li>
+              <a href="/" class="active">home</a>
+            </li>
+            <% if(!session.user) {%> 
+              <li>
+                <a href="/buyandsell">BUY/SELL</a>
+              </li>
+              <%}else{%>
+            <li>
+              <a href="/buyandsell"><%=session.user.type%></a>
+            </li>
+          <% } %> 
+            <li>
+              <a href="/dashboard" >Dash Board</a>
+            </li>
+            <li>
+              <a href="/cart">Cart</a>
+            </li>
+            <li>
+              <a href="/order">Order</a>
+            </li>
+            <li>
+              <a href="/history">history</a>
+            </li>
+      
+		        <li>
+              <a href="/contactus">About uss</a>
+            </li>
+      
+          <li>
+            <button type="button" class="btn w3ls-btn" data-toggle="modal" aria-pressed="false" data-target="#exampleModalCenter2">
+              <% if(session.user) {%> 
+                <%= session.user.username %>
+              <% }
+              else{ %>  
+              Login
+              <%}%>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+</header>
+<!-- //header -->
+

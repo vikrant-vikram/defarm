@@ -1,0 +1,54 @@
+
+	<%- include("parcials/header-top") %> 
+
+		<meta name="description" content="Some distortion hover effects on images using SVG filters." />
+		<meta name="keywords" content="distortion, svg filter, hover, image, effect, web, javascript" />
+		<!--<link rel="shortcut icon" href="favicon.ico">-->
+		<link href="https://fonts.googleapis.com/css?family=Cardo|Nunito+Sans" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+		<%- include("parcials/header-bottom") %> 
+		<%- include("parcials/header") %>
+		<%- include("parcials/header-login") %>  
+		
+
+			<!-- banner -->
+			<div class="banner layer" id="home">
+				<div class="container banner-text">
+
+					<main class="demo-1">
+						<div class="frame ">
+						<div class="content">
+							<svg class="distort" width="350" height="450" viewBox="0 0 350 450">
+								<filter id="distortionFilter">
+									<feTurbulence type="turbulence" baseFrequency="0.07 0.01" numOctaves="5" seed="2" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="noise"/>
+									<feDisplacementMap in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="B" x="0%" y="0%" width="100%" height="100%" filterUnits="userSpaceOnUse"/>
+								</filter>
+								<g filter="url(#distortionFilter)">
+									<image class="distort__img" x="50" y="50" xlink:href="images/1.jpg" height="350" width="250"/>
+									<image class="distort__img" x="50" y="50" xlink:href="images/2.jpg" height="350" width="250"/>
+									<image class="distort__img" x="50" y="50" xlink:href="images/3.jpg" height="350" width="250"/>
+									<image class="distort__img" x="50" y="50" xlink:href="images/4.jpg" height="350" width="250"/>
+								</g>
+							</svg>
+							<nav class="menu">
+								<a href="#" class="menu__link">Shanghai</a>
+								<a href="#" class="menu__link">Taipei</a>
+								<a href="#" class="menu__link">Bangkok</a>
+								<a href="#" class="menu__link">Kyoto</a>
+							</nav>
+						</div>
+					</main>
+				  
+				</div>
+			</div>
+			  
+			  
+		  
+			  <!-- //banner -->
+
+
+		<script src="js/charming.min.js"></script>
+		<script src="js/TweenMax.min.js"></script>
+		<script src="js/demo.js"></script>
+	<%- include("parcials/footer") %> 

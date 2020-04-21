@@ -1,0 +1,24 @@
+{
+  "name": "defarm",
+  "version": "1.0.0",
+  "description": "supply chain application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "supply",
+    "chain",
+    "agriculter",
+    "predication"
+  ],
+  "author": "bikki__maurya",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^5.9.9",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.0.1"
+  }
+}

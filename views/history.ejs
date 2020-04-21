@@ -1,0 +1,37 @@
+<%- include('parcials/header-top') %>
+
+<%- include('parcials/header-bottom') %>
+<%- include('parcials/header') %>
+<%- include('parcials/header-login') %>
+
+<div class="top text-center"> History</div>
+<div class="container">
+<table class="table text-center">
+    <tr>
+        <th>item</th>
+        <th>Reciever</th>
+        <th>Orderdate</th>
+        <th>for date</th>
+        <th>price</th>
+        <th>amount</th>
+        <th>address</th>
+    </tr>
+<% order.forEach(function(orderdata){%>
+
+    <tr>
+        <td><%=orderdata.itemname %> </td>
+        <td><%=orderdata.name %></td>
+        <td><%=orderdata.orderdate %></td>
+        <td><%=orderdata.deliverydate %></td>
+        <td><%=orderdata.price %></td>
+        <td><%=orderdata.quantity %></td>
+        <td><%=orderdata.address1 %></td>
+
+
+    </tr>
+
+<%  }) %> 
+</table>
+</div>
+
+<%- include('parcials/footer') %>
