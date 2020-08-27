@@ -37,7 +37,7 @@ todo.use(function(req,res,next){
 
 
 
-const port=5555;
+const port=process.env.PORT || 5555;
 todo.use(body.urlencoded({extended:true}));
 
 
